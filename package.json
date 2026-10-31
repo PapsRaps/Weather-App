@@ -1,0 +1,33 @@
+{
+  "name": "webpack-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --config webpack/webpack.dev.js",
+    "build": "webpack --config webpack/webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PapsRaps/webpack-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/PapsRaps/webpack-template/issues"
+  },
+  "homepage": "https://github.com/PapsRaps/webpack-template#readme",
+  "devDependencies": {
+    "css-loader": "^7.1.5",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.8",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.112.2",
+    "webpack-cli": "^7.2.3",
+    "webpack-dev-server": "^6.1.0",
+    "webpack-merge": "^6.0.1"
+  }
+}
