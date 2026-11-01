@@ -1,8 +1,3 @@
-# webpack-template
-Scripts:
+# Weather App
 
-npm install - to set up <br>
-
-npm run build - generate out sa dist <br>
-
-npm run dev - open a dev server <br>
+A weather application that allows users to search for a location and view its current weather information using the Visual Crossing Weather API.
