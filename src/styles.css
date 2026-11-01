@@ -1,0 +1,301 @@
+@property --background-color1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #9cccf1;
+}
+
+@property --background-color2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #8CB9D5;
+}
+
+:root{
+    --cards-color: #F5F8FA;
+    --main-text: #334B5C;
+    --icon-color: #7899AD;
+    --secondary-accent: #7899AD;
+    --white-color: #FFFFFF;
+
+    --background-color1: #9cccf1;
+    --background-color2: #8CB9D5;
+
+    --header-font: "Poppins", sans-serif;
+    --body-font: "Inter", sans-serif;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.topPart{
+    background: linear-gradient(135deg, var(--background-color1), var(--background-color2));
+    display: flex;
+    flex-direction: column;
+    transition: --background-color1 800ms ease, --background-color2 800ms ease;
+}
+
+.header{
+    padding: 10px 30px;
+    font-family: var(--header-font);
+    font-weight: bold;
+    color: var(--cards-color);
+    font-size: 1.5rem;
+}
+
+.body{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcomeMessage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: var(--cards-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.welcomeMessage svg{
+    font-size: 2rem;
+}
+
+.welcomeMessage h2{
+    font-family: var(--body-font);
+    font-size: 3rem;
+}
+
+.welcomeMessage p{
+    font-family: var(--header-font);
+    font-size: 1rem;
+}
+
+
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 50px;
+
+    width: 80%;
+    max-width: 600px;
+
+    transition: box-shadow 0.2s ease, border 0.2s ease;
+}
+
+.searchBar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--main-text);
+}
+
+.searchBar input::placeholder {
+    color: var(--secondary-accent);
+}
+
+.searchBar button {
+    border: none;
+    background-color: var(--secondary-accent);
+    color: var(--white-color);
+
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.searchBar:hover {
+    box-shadow: 0 10px 12px rgba(51, 75, 92, 0.60);
+}
+
+.searchBar button:hover {
+    background-color: var(--main-text);
+}
+
+
+
+
+.bottomPart{
+    background-color: var(--cards-color);
+    min-height: 40vh;
+    padding: 20px 30px;
+}
+
+.weatherInfo h3{
+    font-family: var(--header-font);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.weatherInfoContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.weatherInfoCard{
+    background-color: var(--white-color);
+    padding: 20px 20px;
+    border-radius: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weatherInfoCard:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(51, 75, 92, 0.10);
+}
+
+.cardTitle{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardTitle svg{
+    color: var(--icon-color);
+    font-size: 1.5rem;
+}
+
+.cardTitle p{
+    font-family: var(--body-font);
+    color: var(--main-text);
+    font-size: 1.5rem;
+}
+
+.cardValue{
+    margin-top: 20px;
+    font-family: var(--header-font);
+    font-size: 2rem;
+}
+
+
+.infoContainer{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.locationTitle{
+    color: var(--white-color);
+    font-family: var(--header-font);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.temperatureTitle{
+    color: var(--white-color);
+    font-family: var(--header-font);
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+.weatherConditionTitle{
+    color: var(--white-color);
+    font-family: var(--header-font);
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.feelsLikeTitle,.temperatureRanges{
+    color: var(--white-color);
+    font-family: var(--body-font);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+
+.temperatureToggle {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 4px;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.unitButton {
+    border: none;
+    background: transparent;
+    color: var(--cards-color);
+    padding: 6px 14px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.unitButton:not(.active) {
+    background-color: var(--cards-color);
+    color: var(--main-text);
+}
+
+.unitButton {
+    background-color: var(--main-text);
+    color: var(--white-color);
+}
+
+
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.shake {
+    color: red;
+    animation: shake 0.3s;
+}
+
+
+.is-hidden{
+    display: none;
+}

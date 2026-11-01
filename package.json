@@ -1,12 +1,15 @@
 {
-  "name": "webpack-template",
+  "name": "weather-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --config webpack/webpack.dev.js",
-    "build": "webpack --config webpack/webpack.prod.js"
+    "build": "webpack --config webpack/webpack.prod.js",
+    "push": "git checkout main && git push origin main",
+    "sync": "git checkout main && git pull origin main",
+    "deploy": "git checkout main && npm run build && git checkout gh-pages && git merge main --no-edit && git add dist -f && (git diff --cached --quiet || git commit -m \"Deployment commit\") && git subtree split --prefix dist -b deploy-branch && git push origin deploy-branch:gh-pages --force && git branch -D deploy-branch && git checkout main"
   },
   "repository": {
     "type": "git",

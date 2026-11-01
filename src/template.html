@@ -4,9 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A website project">
-    <title>My Website</title>
+    <title>Weather Weather Lang</title>
+    <script src="https://kit.fontawesome.com/6899b7e295.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <div class="container">
+      <div class="topPart">
+        <div class="header">
+          <div class="logo">Weather Weather Lang</div>
+        </div>
+        <div class="body">
+          <div class="welcomeMessage is-hidden">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <h2>Weather at a glance</h2>
+            <p class="validationMessage">Enter a location to get started</p>
+          </div>
+          <form class="searchBar" id="searching" novalidate>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="locationInput" placeholder="Search for a city..." required>
+            <button type="submit" form="searching"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+          <div class="infoContainer">
+            <div class="locationTitle" id="location">San Fernando, Philippines</div>
+            <div class="temperatureToggle">
+              <button class="unitButton active" data-unit="celsius">°C</button>
+              <button class="unitButton" data-unit="fahrenheit">°F</button>
+          </div>
+            <div class="temperatureTitle" id="currentTemp">28C°</div>
+            <div class="weatherConditionTitle" id="weatherCondition">Partly Cloudy</div>
+            <div class="feelsLikeTitle" id="feelsLikeTemp">Feels Like 31C°</div>
+            <div class="temperatureRanges">H: <span id="tempMax">31C°</span> · L: <span id="tempMin">25C°</span></div>
+          </div>
+        </div>
+      </div>
     
+      <div class="bottomPart">
+        <div class="weatherInfo">
+          <h3>Today's highlights</h3>
+          <div class="weatherInfoContainer">
+            <div class="weatherInfoCard">
+              <div class="cardTitle">
+                <i class="fa-solid fa-wind"></i>
+                <p>Wind</p>
+              </div>
+              <div class="cardValue" id="windSpeed">
+                12 km/h
+              </div>
+            </div>
+            <div class="weatherInfoCard">
+              <div class="cardTitle">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Humidity</p>
+              </div>
+              <div class="cardValue" id="humidity">
+                76%
+              </div>
+            </div>
+            <div class="weatherInfoCard">
+              <div class="cardTitle">
+                <i class="fa-solid fa-sun"></i>
+                <p>UV Index</p>
+              </div>
+              <div class="cardValue" id="uvIndex">
+                6
+              </div>
+            </div>
+            <div class="weatherInfoCard">
+              <div class="cardTitle">
+                <i class="fa-solid fa-eye"></i>
+                <p>Visibility</p>
+              </div>
+              <div class="cardValue" id="visibility">
+                10 km
+              </div>
+            </div>
+            <div class="weatherInfoCard">
+              <div class="cardTitle">
+                <i class="fa-solid fa-gauge-simple-high"></i>
+                <p>Pressure</p>
+              </div>
+              <div class="cardValue" id="pressure">
+                1012 hPa
+              </div>
+            </div>
+            <div class="weatherInfoCard">
+              <div class="cardTitle">
+                <i class="fa-solid fa-temperature-low"></i>
+                <p>Dew Point</p>
+              </div>
+              <div class="cardValue" id="dew">
+                22C°
+              </div>
+            </div>
+            <div class="weatherInfoCard">
+              <div class="cardTitle">
+                <i class="fa-solid fa-cloud-rain"></i>
+                <p>Chance of Rain</p>
+              </div>
+              <div class="cardValue" id="chanceOfRain">
+                30%
+              </div>
+            </div>
+            <div class="weatherInfoCard">
+              <div class="cardTitle">
+                <i class="fa-solid fa-cloud"></i>
+                <p>Cloud Cover</p>
+              </div>
+              <div class="cardValue" id="cloudcover">
+                30%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
